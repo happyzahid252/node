@@ -1,0 +1,182 @@
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffaf7b;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #eaeaea;
+}
+
+/* Section Containers */
+section {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+}
+
+.about-content img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+}
+
+/* Partners Section */
+.partners-section {
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    color: #f0f0f5;
+}
+
+.partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+}
+
+.partner-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partner-info:hover {
+    transform: scale(1.05);
+}
+
+/* Logo Animation */
+.partner img {
+    width: 100px;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+    animation: bounceIn 1.5s infinite alternate;
+}
+
+.partner img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+@keyframes bounceIn {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Partner Link Button */
+.partner-link-container {
+    margin-top: 15px;
+}
+
+.partner-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6ec4;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(255, 110, 196, 0.3);
+}
+
+.partner-link:hover {
+    background-color: #ffaf7b;
+    color: #1c1c1c;
+    box-shadow: 0px 8px 20px rgba(255, 110, 196, 0.5);
+}
+
+/* Get In Touch Section */
+.get-in-touch-section {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #fff;
+}
+
+.get-in-touch-container p a {
+    color: #ffaf7b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.get-in-touch-container p a:hover {
+    color: #ff6ec4;
+    text-shadow: 0px 4px 8px rgba(255, 110, 196, 0.5);
+}
+
+/* Animated Section */
+.animated-section {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: #eaeaea;
+}
+
+.animated-content {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.animated-content h1 {
+    color: #ffaf7b;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.animated-content p {
+    color: #f0f0f5;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .about-content img, .partner img {
+        width: 80%;
+    }
+    .animated-content h1 {
+        font-size: 2.5rem;
+    }
+}
